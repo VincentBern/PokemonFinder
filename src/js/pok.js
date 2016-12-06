@@ -25,7 +25,6 @@ $(document).on("click","#Basic", function(){
         $(".basic").attr('style', 'opacity:0; height:0px;');
         document.cookie = ('basic=0');
     };
-
     this.classList.toggle('off');
 });
 

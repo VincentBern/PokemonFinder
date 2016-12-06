@@ -8,131 +8,148 @@
     <meta name="author" content="VincentBern">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>POKEMON FINDER</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="../css/poke.css" type="text/css">
     <link rel="stylesheet" href="../css/CoveoFullSearchNewDesign.css" type="text/css">
     <link rel="icon" href="../img/pkb.png?v=2">
   </head>
 
-  <body id="search" class='CoveoSearchInterface' data-enable-history="true" data-design="new">
+  <body  id="search" class="CoveoSearchInterface" data-enable-history="true" data-design="new">
+    <div class="intro">
+        <h2 class="bit">POKEMON<br/> FINDER</h1>
+        <h5 class="bit">Gotta find'em all</h5>
+        <img src="img/pik.gif" class="pik" id='gif' />
+        <img src='' class="txt" id='giftxt' />
 
-    <div class="container-fluid">
-
-      <div class="intro">
-          <h1 class="bit">POKEMON FINDER</h1>
-          <div class="pokbox">
-            <img src="img/pik.gif" class="pik" id='gif' />
-            <img src='' class="txt" id='giftxt' />
+    </div><!--INTRO-->
+    <div>
+      <div class="coveo-tab-section">
+        <a class="CoveoTab" data-id="All" data-caption="All Content">
+        </a>
+      </div>
+      <div class="coveo-search-section">
+        <div class="CoveoOmnibox" data-enable-wildcards='true' data-enable-reveal-query-suggest-addon='true' data-enable-field-addon='true'></div>
+        <div class="CoveoOmniboxResultList">
+          <script class="result-template" type="text/x-underscore">
+            <div class='row'>
+                <span class='col-xs-1'><img class='poksmall' src='<%- raw.pokimage %>'/></span>
+                <span class='col-xs-3'><a class='CoveoResultLink'><%- raw.pokname %></a></span>
+                <span class='col-xs-7'><%- raw.pokdescription %></span>
+            </div>
+          </script>
+        </div>
+        <div class="CoveoDidYouMean"></div>
+      </div>
+      <div class="coveo-main-section">
+        <div class="coveo-facet-column">
+          <div class="CoveoFacet col-md-12" data-title="Type" data-field="@poktype" data-tab="All"></div>
+          <div class="CoveoFacet col-md-12" data-title="Species" data-field="@pokspecies" data-tab="All"></div>
+          <div class="CoveoFacet col-md-12" data-title="Generation" data-field="@pokgeneration" data-tab="All"></div>
+          <div class="CoveoFacet col-md-12" data-title="Type" data-field="@poktype" data-tab="All"></div>
+          <div class="CoveoFacet col-md-12" data-title="Species" data-field="@pokspecies" data-tab="All"></div>
+          <div class="CoveoFacet col-md-12" data-title="Generation" data-field="@pokgeneration" data-tab="All"></div>
+        </div>
+        <div class="coveo-results-column">
+          <div class="CoveoShareQuery">
           </div>
-          <h5 class="bit">Gotta find'em all</h5>
-      </div><!--INTRO-->
-
-      <div>
-
-        <div class="row">
-
-          <div class="col-md-2 bit">
-            <button id="Clear" class="check" href="#">RESET SEARCH</button>
-            <button id="About" class="check" href="#">ABOUT</button>
-          </div><!-- Dummy -->
-          <div class="col-md-8">
-            <div class="CoveoOmnibox" data-enable-wildcards='true' data-enable-reveal-query-suggest-addon='true' data-enable-field-addon='true'></div>
-            <div class="CoveoOmniboxResultList">
-              <script class="result-template" type="text/x-underscore">
-                <div class='row'>
-                    <span class='col-xs-1'><img class='poksmall' src='<%- raw.pokimage %>'/></span>
-                    <span class='col-xs-3'><a class='CoveoResultLink'><%- raw.pokname %></a></span>
-                    <span class='col-xs-7'><%- raw.pokdescription %></span>
-                </div>
-              </script>
+          <div class="CoveoPreferencesPanel">
+            <div class="CoveoResultsPreferences">
             </div>
-            <div class="CoveoDidYouMean"></div>
-            <div class="CoveoResultsPerPage"></div>
-            <div class="CoveoQuerySummary"></div>
-          </div><!-- Search -->
+            <div class="CoveoResultsFiltersPreferences">
+            </div>
+          </div>
+          <div class="CoveoTriggers">
+          </div>
+          <div class="CoveoBreadcrumb">
+          </div>
+          <div class="CoveoSearchAlerts">
+          </div>
+          <div class="coveo-results-header">
+            <div class="coveo-summary-section">
+              <span class="CoveoQuerySummary">
+              </span>
+              <span class="CoveoQueryDuration">
+              </span>
+            </div>
+            <div class="coveo-sort-section">
+              <span class="CoveoSort" data-sort-criteria="relevancy" data-caption="Relevance">
+              </span>
+              <span class="CoveoSort" data-sort-criteria="date descending,date ascending" data-caption="Date">
+              </span>
+            </div>
+          </div>
+          <div class="CoveoHiddenQuery">
+          </div>
+          <div class="CoveoDidYouMean">
+          </div>
+          <div class="CoveoErrorReport" data-pop-up="false">
+          </div>
+          <div class="CoveoResultList" data-wait-animation="fade" data-auto-select-fields-to-include="true">
+            <script id="Default" class="result-template" type="text/underscore"  >
+              <div class="coveo-result-frame">
+                <div class="coveo-result-row">
+                  <div class="coveo-result-cell" style="width:85px;text-align:center;padding-top:7px;">
+                    <img class='pok' src='<%- raw.pokimage %>'/>
 
-          <div class="col-md-2 bit">
-            <button id="Basic" class="check off">Basic filters</button>
-            <button id="Advanced" class="check off">Advanced filters</button>
-          </div><!-- Filters -->
-
-        </div><!-- Search zone -->
-
-        <div class="row">
-
-          <div class="col-md-2 basic" style="opacity: 0">
-            <div class="CoveoFacet col-md-12" data-title="Type" data-field="@poktype" data-tab="All"></div>
-            <div class="CoveoFacet col-md-12" data-title="Species" data-field="@pokspecies" data-tab="All"></div>
-            <div class="CoveoFacet col-md-12" data-title="Generation" data-field="@pokgeneration" data-tab="All"></div>
-          </div><!-- Basic filters -->
-
-          <div class="col-md-8">
-            <div class="CoveoResultList" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-title='Height'>
-              <script id='MyTemplate' type='text/underscore' class='result-template'>
-              <h1><%- raw.totalcount %></h1>
-                <div class="coveo-result-frame">
-                    <div class="row">
-
-                        <div class="col-xs-2">
-                            <img class='pok' src='<%- raw.pokimage %>'/>
+                    <div class="CoveoQuickview">
                         </div>
+                  </div>
+                  <div class="coveo-result-cell" style="padding-left:15px;">
+                    <div class="coveo-result-row">
+                      <div class="coveo-result-cell" style="font-size:18px;">
+                        <a class="CoveoResultLink"><text class='pokname'><%- raw.pokname %></text></a>
 
-                        <div class="col-md-10">
-                            <a class="CoveoResultLink"><text class='pokname'><%- raw.pokname %></text></a>
-                            <span class="CoveoQuickview"><div class='coveo-icon-for-quickview'>Quickview</div></span>
-                        </div>
-
-                        <div class="col-md-2">
-                        </div>
-
-                        <div class='col-md-10'>
-                            <div class="col-md-5 pokdsc">
-                                <p> <b>Description</b> : <%- raw.pokdescription %>  </p>
-                                <p> <b>Type</b> : <%- raw.poktype %>  </p>
-                                {{ if(raw.pokgeneration){ }} <p> <b>Generation</b> : <%- raw.pokgeneration %>  </p>{{ } }}
-                                <p> <b>Abilities</b> : <%- raw.pokabilities %>  </p>
-                                {{ if(raw.pokabilitiessmall){ }} <p> <b>Small abilities</b> : <%- raw.pokabilitiessmall %>  </p>{{ } }}
-                            </div>
-
-                            <div class='col-md-7'>
-
-                               <div class="col-xs-4 pokdsc">
-                                   <span class='dscimg'> <img src='img/hash.png' title='Number'/><text>  <%- raw.poknational %>  </text></span><br/>
-                                    <span class='dscimg'> <img src='img/height.png' title='Height'/><text>   <%- raw.pokft %> m </text></span><br/>
-                                    <span class='dscimg'> <img src='img/weight.png' title='Weight'/><text>  <%- raw.poklbs %> lbs </text> </span>
-                                </div>
-
-                               <div class="col-xs-4 pokdsc">
-                                    <span class='dscimg'> <img src='img/hrt.png' title='HP'/><text>  <%- raw.pokstats1 %>  </text></span><br/>
-                                    <span class='dscimg'> <img src='img/atk.png' title='Attack'/><text>  <%- raw.pokstats2 %>  </text></span><br/>
-                                    <span class='dscimg'> <img src='img/def.png' title='Defense'/><text>  <%- raw.pokstats3 %>  </text></span><br/>
-                                </div>
-
-                               <div class="col-xs-4 pokdsc">
-                                    <span class='dscimg'> <img src='img/spatk.png' title='Special attack'/><text>  <%- raw.pokstats4 %>  </text></span><br/>
-                                    <span class='dscimg'> <img src='img/spdef.png' title='Special defense'/><text>  <%- raw.pokstats5 %>  </text></span><br/>
-                                    <span class='dscimg'> <img src='img/spe.png' title='Speed'/><text>  <%- raw.pokstats6 %>  </text></span><br/>
-                                </div>
-
-                            </div>
-                        </div>
+                      </div>
+                      <div class="coveo-result-cell" style="width:120px; text-align:right; font-size:12px">
+                        <span class="CoveoFieldValue" data-field="@date" data-helper="date">
+                        </span>
+                      </div>
                     </div>
-
+                    <div class="coveo-result-row">
+                      <div class="coveo-result-cell">
+                        <span><%- raw.pokdescription %>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </script>
-            </div>
-          </div><!-- Results -->
+                <div class="coveo-result-row">
+                  <div class="coveo-result-cell" style="width:85px;text-align:center">
+                  </div>
+                  <div class="coveo-result-cell" style="font-size:13px;padding-left: 15px;">
+                    <table class="CoveoFieldTable">
+                      <tbody>
+                        <tr data-field="@poktype" data-caption="Type">
+                        </tr>
+                        <tr data-field="@pokspecies" data-caption="Species">
+                        </tr>
+                        <tr data-field="@pokgeneration" data-caption="Generation">
+                        </tr>
+                        <tr data-field="@pokjapanese" data-caption="Japanese name">
+                        </tr>
+                        <tr data-field="@pokabilities" data-caption="Abilities">
+                        </tr>
+                        <tr data-field="@poksmallabilities" data-caption="Small abilities">
+                        </tr>
+                      </tbody>
+                    </table>
 
-          <div class="col-md-2 advanced" style="opacity:0">
-            <div class='CoveoFacetSlider' data-field='@poklbs' data-start='0' data-end='1700' data-range-slider='true' data-graph-steps='10' data-title='Weight'></div>
-            <div class='CoveoFacetSlider' data-field='@pokft' data-start='0' data-end='15' data-range-slider='true' data-graph-steps='15' data-title='Height'></div>
-            <div class='CoveoFacetSlider' data-field='@poknumber' data-start='0' data-end='820' data-range-slider='true' data-graph-steps='50' data-title='Number'></div>
-          </div><!-- Advanced filters -->
-
-        </div><!-- Results -->
+                  </div>
+                </div>
+              </div>
+            </script>
+          </div>
+          <div class="CoveoPager">
+          </div>
+        </div>
       </div>
     </div>
+
+
+
+
+
     <script src="js/bundle.min.js"></script>
+    <script src="js/TemplateNew.js"></script>
     <script>
       Coveo.SearchEndpoint.configureCloudEndpoint('vincentbernardtechtest', 'xx970490e0-4e70-4331-8d4b-1c2c022e2346');
       Coveo.init(document.body);
