@@ -23,12 +23,7 @@
 }
 
 /* Img */
-.pik{
-    max-height: 150px;
-    float: right;
-    margin-top: -100px;
-    margin-bottom: 50px;
-}
+
 
 .chr{
     float: right;
@@ -53,12 +48,7 @@
     max-height: 50px;
 }
 
-.txt{
-  max-width: 110px;
-  float: right;
-  margin-top: -90px;
 
-}
 
 
 /* Global design*/
@@ -163,13 +153,57 @@
 .abo{
 }
 
-.intro > h1, .foftxt > h1{
-  font-size: 58pt;
-}
+@media screen and (min-width: 480px) {
 
-.intro > h5, .foftxt > h4{
-  font-size: 28pt;
-}
+  .intro > h1, .foftxt > h1{
+    font-size: 5vw;
+  }
+
+  .intro > h5, .foftxt > h4{
+    font-size: 2vw;
+  }
+
+  .txt{
+    max-width: 110px;
+    float: right;
+    margin-top: -90px;
+
+  }
+
+  .pik{
+      max-height: 150px;
+      float: right;
+      margin-top: -100px;
+      margin-bottom: 50px;
+  }
+};
+
+
+@media screen and (min-width: 100px) {
+
+  .intro > h1, .foftxt > h1{
+    font-size: 100vw;
+  }
+
+  .intro > h5, .foftxt > h4{
+    font-size: 50vw;
+  }
+
+  .txt{
+    max-width: 110px;
+    float: right;
+    margin-top: -90px;
+
+  }
+
+  .pik{
+      max-height: 150px;
+      float: right;
+      margin-top: -100px;
+      margin-bottom: 50px;
+  }
+};
+
 
 .foftxt{
   color:white;
@@ -180,8 +214,8 @@
   padding: 0px 20px 0px 30px;
   display: inline-block;
   width: 100%;
-
 }
+
 
 /*THEME COLOR*/
 
