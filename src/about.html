@@ -1,66 +1,55 @@
-<!doctype html>
 
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="theme-color" content="#E50000" />
-    <meta name="description" content="Pokemon Search">
-    <meta name="author" content="VincentBern">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pokemon Search</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="../css/poke.css" type="text/css">
-    <link rel="icon" href="../img/pkb.png?v=2">
-</head>
+    <div class="abo">
 
-<body class="abo">
-
-    <div class="container">
-
-        <div class="row intro">
+        <div class="row exp">
                 <h1 class="bit">ABOUT</h1>
-                <img src="img/vin.gif" class="bou">
-                <h3 class="bit">Hi! I'm Vincent, the dojo master.</h4>
-                <h3 class="bit">I've done <a href="..">this search UI</a> for my Coveo Technical test.</h4>
+
+                <table class="exp">
+                    <tr>
+                      <td class="td-img"><img src="img/vin.gif" class="bou"></td>
+
+                        <td>
+                          <ul>
+                              <li>Hi! I'm Vincent, the dojo master. I've build this search UI for my Coveo Technical test</li>
+                          </ul>
+                        </td>
+                    </tr>
+
+                </table>
         </div>
 
         <div class="row">
             <div class="col-md-12">
-                <h2 class="bit exp">FUNCTIONALITIES</h2>
+                <h2 class="bit">FUNCTIONALITIES</h2>
 
                 <table class="exp">
                     <tr>
-                        <td>Basic filters with using CoveoFacet (species, type, generation)</td>
+                      <td class="td-img"><img src='img/dex.gif' class='fed' /></td>
+                        <td>
+                          <ul>
+                            <li>Choose from our predefined tabs to help your search</li>
+                            <li>Lots of filters for precise tas</li>
+                            <li>Lots of sliders for complex searches</li>
+                          	<li>Preview your pokemons in the search results or in the quick suggestion dropdown</li>
+                            <li>Awesome <a href="../404">404</a> page !</li>
+                          </ul>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Advanced filters with using CoveoFacetSlider (height, weight, number)</td>
-                    </tr>
-                    <tr>
-                        <td>Autosuggest, Did you mean and result count</td>
-                    </tr>
-                    <tr>
-                        <td>Toggling the filters and saving the user choice</td>
-                    </tr>
-                    <tr>
-                        <td>Quickstats on every pokemon for better search</td>
-                    </tr>
-                    <tr>
-                        <td>Awesome <a href="404">404</a> page !</td>
-                    </tr>
+
                 </table>
 
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-12 exp">
+            <div class="col-md-12">
                 <h2 class="bit">Feedback</h2>
 
                 <table class="exp">
 
                     <tr>
-                        <td><img src='img/up.png' class='fed' /></td>
+                        <td class="td-img"><img src='img/up.png' class='fed' /></td>
 
                         <td>
                             <ul>
@@ -73,13 +62,13 @@
                     </tr>
 
                     <tr>
-                        <td><img src='img/dwn.png' class='fed'/></td>
+                        <td class="td-img"><img src='img/dwn.png' class='fed'/></td>
                         <td>
                             <ul>
                               <li>Extracting and transforming the childs nodes text using XPath was a pain at first.</li>
-                                <li>Major difficulties with the indexed content. Unable to find a Pokemon if I enter the full name. Always need to use a refined search (@pokname='geodude'). I told Covéo about it on my Slack team.</li>
-                                <li>Sometimes, on <a href='http://pokemondb.net/'>pokemondb.net</a>, Pokemons have multiple data sets for the same ID (ex: two descriptions and two images for the same pokemon). It gave me some irregularities between the slider filters and the quickstats information.</li>
-                                <li>Basic html snippets would had accelerate my process. I had hard times figuring out how to implemant OmniBox for exemple.</li>
+                                <li>Major difficulties with the indexed content. Unable to find a Pokemon if I enter the full name. Always need to use a refined search (@pokname='geodude'). Found that some of my crawlers gave an "NaN" value in the index</li>
+                                <li>Sometimes, on <a href='http://pokemondb.net/'>pokemondb.net</a>, Pokemons have multiple data sets for the same ID (ex: two descriptions and two images for the same pokemon). It gave me some irregularities in the data.</li>
+                                <li>Found the HTML editor WAY too late</li>
                                 <li>I'm new to GitHub and Heroku, the deploiement has been .. salty!</li>
                             </ul>
 
@@ -98,6 +87,7 @@
                 <table class="exp">
 
                     <tr>
+                      <td class="td-img"><img src='img/com.png' class='fed'/></td>
                         <td>
                             <ul>
                                 <li>Editor : Atom</li>
@@ -118,7 +108,3 @@
             </div>
         </div>
     </div>
-
-</body>
-
-</html>

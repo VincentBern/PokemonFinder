@@ -46,7 +46,15 @@
 }
 
 .fed{
-    max-height: 50px;
+    min-height: 70px;
+    max-height: 70px;
+    margin-right: 5px;
+    float: right;
+}
+
+.bou{
+    max-height: 120px;
+    margin-left: 5px;
 }
 
 .pik, .txt{
@@ -57,11 +65,9 @@
   x-index: -10;
 }
 
-.bou{
-  width: calc(100px + 1.5vw);
-  margin-top: 15px;
-  min-width: 100px;
-  float: right;
+
+.td-img{
+  width:100px;
 }
 
 .pik{
@@ -73,13 +79,20 @@ margin-bottom: 100px;
 
 .txt{
 position: absolute;
-right: 120px;
+right: 110px;
 top: 0;
 }
 
 @media (max-width:500px) {
 
 .txt{display: none}
+
+.pik{
+  position: absolute;
+  right: 0px;
+  top: -10px;
+}
+
  }
 
 .coveo-facet-column{
@@ -99,9 +112,9 @@ top: 0;
 
 
 .intro{
-  margin: 10px 20px 0px 20px;
+  margin: 10px 0px 0px 20px;
   display: inline-block;
-  width: 100%;
+  width: 90%;
   max-height: 200px;
 }
 
@@ -137,7 +150,7 @@ top: 0;
     right: 5%;
 }
 
-.exp > tbody > tr > td{
+.exp > tbody > tr > td, .exp > p{
 
     padding: 10px;
     font-size: 13pt;
@@ -205,6 +218,8 @@ top: 0;
   background-color: #FF7E00;
 }
 .abo{
+  width:100%;
+  padding: 20px;
 }
 
 .foftxt{
