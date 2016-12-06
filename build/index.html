@@ -36,9 +36,9 @@
         <div class="CoveoOmniboxResultList">
           <script class="result-template" type="text/x-underscore">
             <div class='row'>
-                <span class='col-xs-1'><img class='poksmall' src='<%- raw.pokimage %>'/></span>
-                <span class='col-xs-3'><a class='CoveoResultLink'><%- raw.pokname %></a></span>
-                <span class='col-xs-7'><%- raw.pokdescription %></span>
+                <span><img class='poksmall' src='<%- raw.pokimage %>'/></span>
+                <span><a class='CoveoResultLink'><%- raw.pokname %></a></span>
+                <span><%- raw.pokdescription %></span>
             </div>
           </script>
         </div>
@@ -157,7 +157,6 @@
     </div>
 
     <script src="js/bundle.min.js"></script>
-    <script src="js/TemplateNew.js"></script>
     <script>
       Coveo.SearchEndpoint.configureCloudEndpoint('vincentbernardtechtest', 'xx970490e0-4e70-4331-8d4b-1c2c022e2346');
       Coveo.init(document.body);
