@@ -1,0 +1,6 @@
+http://pokemondb.net/type*
+http://pokemondb.net/move*
+http://pokemondb.net/pokedex/type*
+http://pokemondb.net/pokedex/game*
+http://pokemondb.net/pokedex/national*
+http://pokemondb.net/etymology*
