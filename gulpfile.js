@@ -55,7 +55,7 @@ gulp.task('img', function(){
 });
 
 gulp.task('font', function(){
-  gulp.src(paths.src + paths.font)
+  gulp.src(paths.src + paths.font + '/*')
   .pipe(gulp.dest(paths.build + paths.font))
 });
 
