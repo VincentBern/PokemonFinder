@@ -1,0 +1,131 @@
+[
+  {
+    "for": {
+      "urls": [".*"]
+    },
+
+    "exclude": [
+      {
+        "type": "CSS",
+        "path": "body > header"
+      },
+      {
+        "type": "CSS",
+        "path": "body > nav"
+      },
+      {
+        "type": "CSS",
+        "path": " body > footer"
+      }
+    ],
+
+  "metadata": {
+
+    "pokname": {
+        "type": "css",
+        "path": "body > article > h1::text"
+      },
+
+    "poknational": {
+        "type": "XPATH",
+        "path": "//*[@class='svtabs-panel']/div[1]/div[2]/table/tbody/tr[1]/td/strong/text()"
+      },
+
+    "poknumber": {
+        "type": "XPATH",
+        "path": "round(//*[@class='svtabs-panel']/div[1]/div[2]/table/tbody/tr[1]/td/strong/text())"
+      },
+
+      "poktype": {
+        "type": "css",
+        "path": ".svtabs-panel > div:nth-child(1) > div:nth-child(2) > table > tbody > tr:nth-child(2) > td > a::text"
+      },
+
+      "pokspecies": {
+        "type": "css",
+        "path": ".svtabs-panel > div:nth-child(1) > div:nth-child(2) > table > tbody > tr:nth-child(3) > td::text"
+      },
+
+      "pokheight": {
+        "type": "css",
+        "path": ".svtabs-panel > div:nth-child(1) > div:nth-child(2) > table > tbody > tr:nth-child(4) > td::text"
+      },
+
+      "pokft": {
+        "type": "XPATH",
+        "path": "substring-before(substring-after(//*[@class='svtabs-panel']/div[1]/div[2]/table/tbody/tr[4]/td/text(), '('), 'm')"
+      },
+
+      "pokweight": {
+        "type": "XPATH",
+        "path": "//*[@class='svtabs-panel']/div[1]/div[2]/table/tbody/tr[5]/td/text()"
+      },
+
+      "poklbs": {
+        "type": "XPATH",
+        "path": "substring-before(//*[@class='svtabs-panel']/div[1]/div[2]/table/tbody/tr[5]/td/text(), 'l')"
+      },
+
+      "pokabilities": {
+        "type": "css",
+        "path": ".svtabs-panel > div:nth-child(1) > div:nth-child(2) > table > tbody > tr:nth-child(6) > td > a::text"
+      },
+
+      "pokabilitiessmall": {
+        "type": "css",
+        "path": ".svtabs-panel > div:nth-child(1) > div:nth-child(2) > table > tbody > tr:nth-child(6) > td > small > a::text"
+      },
+
+      "pokgeneration": {
+        "type": "css",
+        "path": "body > article > div:nth-child(4) > div.col.desk-span-8.lap-span-6 > p > abbr::text"
+      },
+
+      "pokdescription": {
+        "type": "XPATH",
+        "path": "string(/html/body/article/div[1]/div[1]/p)"
+      },
+
+      "pokimage": {
+        "type": "css",
+        "path": ".svtabs-panel > div:nth-child(1) > div.col.desk-span-4.lap-span-6.figure > img::attr(src)"
+      },
+
+      "pokstats1": {
+        "type": "xpath",
+        "path": "round(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[1]/td[1]/text())"
+      },
+
+      "pokstats2": {
+        "type": "xpath",
+        "path": "round(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[2]/td[1]/text())"
+      },
+
+      "pokstats3": {
+        "type": "xpath",
+        "path": "round(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[3]/td[1]/text())"
+      },
+
+      "pokstats4": {
+        "type": "xpath",
+        "path": "round(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[4]/td[1]/text())"
+      },
+
+      "pokstats5": {
+        "type": "xpath",
+        "path": "round(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[5]/td[1]/text())"
+      },
+
+      "pokstats6": {
+        "type": "xpath",
+        "path": "round(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[6]/td[1]/text())"
+      },
+
+      "pokjapanese": {
+        "type": "css",
+        "path": ".svtabs-panel > div:nth-child(1) > div:nth-child(2) > table > tbody > tr:nth-child(8) > td::text"
+      }
+
+    }
+  }
+]

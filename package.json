@@ -1,0 +1,36 @@
+{
+  "name": "PokemonFinder",
+  "version": "1.0.0",
+  "description": "My Coveo Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VincentBern/PokemonFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VincentBern/PokemonFinder/issues"
+  },
+  "homepage": "https://github.com/VincentBern/PokemonFinder#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "browserify": "^13.1.1",
+    "coveo-search-ui": "^1.1550.8",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-coffee": "^2.3.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-replace": "^0.5.4",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "gulpzilla": "^4.0.1",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {}
+}
