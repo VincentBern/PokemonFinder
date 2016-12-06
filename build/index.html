@@ -20,7 +20,7 @@
         <img src="img/pik.gif" class="pik" id='gif' />
         <img src='' class="txt" id='giftxt' />
 
-    </div><!--INTRO-->
+    </div>
     <div>
       <div class="coveo-tab-section bit">
         <a class="CoveoTab" data-id="Global" data-caption="Global"></a>
@@ -151,7 +151,7 @@
           </div>
         </div>
       </div>
-      <div class="Test" data-tab='About' contenteditable="true">
+      <div class="abo" data-tab='About' contenteditable="true">
 
     </div>
     </div>
@@ -164,8 +164,19 @@
     </script>
 
     <script>
-      /* the simplest method in the library */
-       jQuery(".Test").load("about");
+       jQuery(".abo").load("about");
+       jQuery(document).on('click', 'a[class="CoveoTab"]', function(){
+         debugger;
+         if (jQuery(this).attr('data-id') =='about'){
+           jQuery('.pik').fadeOut();
+           jQuery('.txt').fadeOut();
+         }else{
+           jQuery('.pik').fadeIn();
+           jQuery('.txt').fadeIn();
+         }
+
+       });
+
     </script>
   </body>
 </html>
