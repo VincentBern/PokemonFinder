@@ -1,3 +1,10 @@
+
+var gulp = require('gulp');
+var uglify = require('gulp-uglify');
+var browserify = require('gulp-browserify');
+var rename = require('gulp-rename');
+var replace = require('gulp-replace');
+var del = require('del');
 var paths = {
   build: './build/',
   src: './src/',
@@ -9,17 +16,16 @@ var paths = {
   boo: 'node_modules/bootstrap/dist/',
 };
 
-// loads various gulp modules
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var browserify = require('gulp-browserify');
-var rename = require('gulp-rename');
-var replace = require('gulp-replace');
-var del = require('del');
-
 gulp.task('clean', function() {
   return del([paths.build]);
 });
+
+// Change server port for prod version
+gulp.task('server', function() {
+  gulp.src([paths.src + 'server.js'])
+    .pipe(replace('3000', '3001'))
+    .pipe(gulp.dest(paths.build));
+  });
 
 gulp.task('js', function() {
 
@@ -29,12 +35,6 @@ gulp.task('js', function() {
     .pipe(rename('bundle.min.js'))
     .pipe(gulp.dest(paths.src + paths.js));
 });
-
-gulp.task('server', function() {
-  gulp.src([paths.src + 'server.js'])
-    .pipe(replace('3000', '3001'))
-    .pipe(gulp.dest(paths.build));
-  });
 
 gulp.task('css', function(){
   gulp.src( paths.boo + 'css/bootstrap.min.css')
@@ -55,12 +55,12 @@ gulp.task('img', function(){
 });
 
 gulp.task('font', function(){
-  gulp.src(paths.src + paths.font + '*')
+  gulp.src(paths.src + paths.font)
   .pipe(gulp.dest(paths.build + paths.font))
 });
 
 
-gulp.task('build', ['clean', 'js', 'server', 'css', 'img', 'font'] , function() {
+gulp.task('build', ['clean', 'server', 'js', 'css', 'img', 'font'] , function() {
 
   gulp.src(paths.src + paths.js + 'bundle.min.js')
   .pipe(gulp.dest(paths.build + paths.js))

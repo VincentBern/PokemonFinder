@@ -8,10 +8,10 @@
     <meta name="author" content="VincentBern">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>POKEMON FINDER</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/poke.css" type="text/css">
-    <link rel="stylesheet" href="css/CoveoFullSearchNewDesign.css" type="text/css">
-    <link rel="icon" href="img/pkb.png?v=2">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/poke.css" type="text/css">
+    <link rel="stylesheet" href="../css/CoveoFullSearchNewDesign.css" type="text/css">
+    <link rel="icon" href="../img/pkb.png?v=2">
   </head>
 
   <body id="search" class='CoveoSearchInterface' data-enable-history="true" data-design="new">
@@ -33,9 +33,10 @@
 
           <div class="col-md-2 bit">
             <button id="Clear" class="check" href="#">RESET SEARCH</button>
+            <button id="About" class="check" href="#">ABOUT</button>
           </div><!-- Dummy -->
           <div class="col-md-8">
-            <div class="CoveoOmnibox" data-enable-search-as-you-type="true" data-enable-reveal-query-suggest-addon='true' data-enable-field-addon='true'></div>
+            <div class="CoveoOmnibox" data-enable-wildcards='true' data-enable-reveal-query-suggest-addon='true' data-enable-field-addon='true'></div>
             <div class="CoveoOmniboxResultList">
               <script class="result-template" type="text/x-underscore">
                 <div class='row'>
@@ -125,17 +126,17 @@
           <div class="col-md-2 advanced" style="opacity:0">
             <div class='CoveoFacetSlider' data-field='@poklbs' data-start='0' data-end='1700' data-range-slider='true' data-graph-steps='10' data-title='Weight'></div>
             <div class='CoveoFacetSlider' data-field='@pokft' data-start='0' data-end='15' data-range-slider='true' data-graph-steps='15' data-title='Height'></div>
-            <div class='CoveoFacetSlider' data-field='@poknumber' data-start='0' data-end='750' data-range-slider='true' data-graph-steps='50' data-title='Number'></div>
+            <div class='CoveoFacetSlider' data-field='@poknumber' data-start='0' data-end='820' data-range-slider='true' data-graph-steps='50' data-title='Number'></div>
           </div><!-- Advanced filters -->
 
         </div><!-- Results -->
       </div>
     </div>
-    <p class="bit about"><a href="about">About</a></p>
     <script src="js/bundle.min.js"></script>
     <script>
-      Coveo.SearchEndpoint.configureCloudEndpoint('vincentbernardtechtest', 'xx8ded3ff4-9e26-481c-863a-374c1bd56dbe');
+      Coveo.SearchEndpoint.configureCloudEndpoint('vincentbernardtechtest', 'xx970490e0-4e70-4331-8d4b-1c2c022e2346');
       Coveo.init(document.body);
+
     </script>
   </body>
 </html>
