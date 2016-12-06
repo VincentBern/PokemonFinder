@@ -22,11 +22,16 @@
 
     </div><!--INTRO-->
     <div>
-      <div class="coveo-tab-section">
-        <a class="CoveoTab" data-id="All" data-caption="All Content">
-        </a>
+      <div class="coveo-tab-section bit">
+        <a class="CoveoTab" data-id="Global" data-caption="Global"></a>
+        <a class="CoveoTab" data-id="Tech" data-caption="Dimensions"></a>
+        <a class="CoveoTab" data-id="Specs" data-caption="Specs"></a>
+        <a class="CoveoTab" data-id="Gen" data-caption="Generation"></a>
+        <a class="CoveoTab" data-id="All" data-caption="All"></a>
+        <a class="CoveoTab" data-id="About" data-caption="About"></a>
+
       </div>
-      <div class="coveo-search-section">
+      <div class="coveo-search-section" data-tab-not='About'>
         <div class="CoveoOmnibox" data-enable-wildcards='true' data-enable-reveal-query-suggest-addon='true' data-enable-field-addon='true'></div>
         <div class="CoveoOmniboxResultList">
           <script class="result-template" type="text/x-underscore">
@@ -39,15 +44,19 @@
         </div>
         <div class="CoveoDidYouMean"></div>
       </div>
-      <div class="coveo-main-section">
+      <div class="coveo-main-section"  data-tab-not='About'>
         <div class="coveo-facet-column">
-          <div class="CoveoFacet" data-title="Type" data-field="@poktype" data-tab="All"></div>
-          <div class="CoveoFacet" data-title="Species" data-field="@pokspecies" data-tab="All"></div>
-          <div class="CoveoFacet" data-title="Generation" data-field="@pokgeneration" data-tab="All"></div>
-          <div class='CoveoFacetSlider' data-field='@poklbs' data-start='0' data-end='1700' data-range-slider='true' data-graph-steps='10' data-title='Weight'></div>
-          <div class='CoveoFacetSlider' data-field='@pokft' data-start='0' data-end='15' data-range-slider='true' data-graph-steps='15' data-title='Height'></div>
-          <div class='CoveoFacetSlider' data-field='@poknumber' data-start='0' data-end='820' data-range-slider='true' data-graph-steps='50' data-title='Number'></div>
+          <div class="CoveoFacet"  data-tab='Global, All' data-title="Type" data-field="@poktype"></div>
+          <div class="CoveoFacet"  data-tab='Global, All' data-title="Species" data-field="@pokspecies"></div>
+          <div class="CoveoFacet"  data-tab='Gen, All' data-title="Generation" data-field="@pokgeneration"></div>
+          <div class='CoveoFacetSlider' data-tab='Gen, All' data-field='@poknumber' data-start='0' data-end='802' data-range-slider='true' data-graph-steps='14' data-title='Number'></div>
+          <div class='CoveoFacetSlider' data-tab='Tech, All' data-field='@poklbs' data-start='0' data-end='1700' data-range-slider='true' data-graph-steps='10' data-title='Lbs - Weight'></div>
+          <div class='CoveoFacetSlider' data-tab='Tech, All' data-field='@pokft' data-start='0' data-end='15' data-range-slider='true' data-graph-steps='15' data-title='M - Height'></div>
+          <div class='CoveoFacetSlider' data-tab='Specs, All' data-field='@pokstats1' data-start='0' data-end='300' data-range-slider='true' data-graph-steps='10'data-title='HP - Health'></div>
+          <div class='CoveoFacetSlider' data-tab='Specs, All' data-field='@pokstats2' data-start='0' data-end='300' data-range-slider='true' data-graph-steps='10'data-title='Defense'></div>
+          <div class='CoveoFacetSlider' data-tab='Specs, All' data-field='@pokstats3' data-start='0' data-end='300' data-range-slider='true' data-graph-steps='10'data-title='Speed'></div>
         </div>
+
         <div class="coveo-results-column">
           <div class="CoveoShareQuery">
           </div>
@@ -142,11 +151,10 @@
           </div>
         </div>
       </div>
+      <div class="Test" data-tab='About' contenteditable="true">
+
     </div>
-
-
-
-
+    </div>
 
     <script src="js/bundle.min.js"></script>
     <script src="js/TemplateNew.js"></script>
@@ -154,6 +162,11 @@
       Coveo.SearchEndpoint.configureCloudEndpoint('vincentbernardtechtest', 'xx970490e0-4e70-4331-8d4b-1c2c022e2346');
       Coveo.init(document.body);
 
+    </script>
+
+    <script>
+      /* the simplest method in the library */
+       jQuery(".Test").load("about");
     </script>
   </body>
 </html>

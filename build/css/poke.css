@@ -54,6 +54,14 @@
   margin-top: 15px;
   min-width: 100px;
   float: right;
+  x-index: -10;
+}
+
+.bou{
+  width: calc(100px + 1.5vw);
+  margin-top: 15px;
+  min-width: 100px;
+  float: right;
 }
 
 .pik{
@@ -78,15 +86,14 @@ top: 0;
   width: inherit !important;
 }
 
-.intro > h2{
-  font-size:calc(12px + 4vw);
-  line-height: calc(12px + 4vw);
+.intro > h2, .foftxt > h2{
+  font-size:calc(12px + 3vw);
+  line-height: calc(12px + 3vw);
   margin: 0px;
 }
 
-.intro > h5{
+.intro > h5, .foftxt > h5{
   font-size:calc(12px + 1vw);
-  line-height: calc(12px + 4vw);
   margin: 0px;
 }
 
@@ -202,7 +209,8 @@ top: 0;
 
 .foftxt{
   color:white;
-  padding: 0px 0px 0px 30px;
+  padding: 20px 0px 0px 30px;
+  width: 100%;
 }
 
 /*THEME COLOR*/
@@ -230,6 +238,16 @@ top: 0;
   font-family: bit;
 }
 
-.coveo-results-per-page-list-item.coveo-active{
-  color: white;
+.coveo-facet-header-title{
+  font-size: 8pt !important;
+}
+
+.coveo-facet-value{
+  line-height: 12pt !important;
+  font-size: 11pt;
+}
+
+.CoveoTab.coveo-selected, .CoveoTab.coveo-selected:hover {
+    border-bottom: 4px solid purple !important;
+    padding-bottom: 0px;
 }
