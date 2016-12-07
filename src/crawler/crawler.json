@@ -91,34 +91,24 @@
         "path": ".svtabs-panel > div:nth-child(1) > div.col.desk-span-4.lap-span-6.figure > img::attr(src)"
       },
 
-      "pokstats1": {
+      "pokhp": {
         "type": "xpath",
-        "path": "round(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[1]/td[1]/text())"
+        "path": "number(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[1]/td[1]/text())"
       },
 
-      "pokstats2": {
+      "pokatk": {
         "type": "xpath",
-        "path": "round(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[2]/td[1]/text())"
+        "path": "number(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[2]/td[1]/text())"
       },
 
-      "pokstats3": {
+      "pokdef": {
         "type": "xpath",
-        "path": "round(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[3]/td[1]/text())"
+        "path": "number(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[3]/td[1]/text())"
       },
 
-      "pokstats4": {
+      "pokspeed": {
         "type": "xpath",
-        "path": "round(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[4]/td[1]/text())"
-      },
-
-      "pokstats5": {
-        "type": "xpath",
-        "path": "round(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[5]/td[1]/text())"
-      },
-
-      "pokstats6": {
-        "type": "xpath",
-        "path": "round(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[6]/td[1]/text())"
+        "path": "number(//*[@class='svtabs-panel']/div[2]/div[1]/table/tbody/tr[6]/td[1]/text())"
       },
 
       "pokjapanese": {

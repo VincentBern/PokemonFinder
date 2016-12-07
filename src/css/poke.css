@@ -1,60 +1,47 @@
-/* Bootstrap modz */
-.navbar-default{
-    background-color: #E50000;
-    border-color: #E50000;
-    border-radius: 0px;
-    box-shadow: 0px 2px 10px rgb(77,77,77);
+/* FONTS*/
+
+@font-face {
+  font-family: bit;
+  src: url(../font/BIT.TTF);
 }
 
-.navbar-default .navbar-nav>li>a{
-    color: white;
+@font-face {
+  font-family: min;
+  src: url(../font/Minecraft.TTF);
 }
 
-.navbar-brand{
-    color: white !important;
+.bit{
+  font-family: bit;
 }
 
-.navbar-default .navbar-toggle{
-    border-color: white;
-}
-
-.navbar-default .navbar-toggle .icon-bar{
-    background-color: white;
+.min{
+  font-family: min;
 }
 
 /* Img */
 
-
-.chr{
-    float: right;
-    display: inline-block;
-}
-
-.pok{
-
-    max-height: 100px;
-    max-width: 100%;
-    float: right;
-
+.pokimg{
+  max-height: 100px;
+  max-width: 100%;
+  float: right;
 }
 
 .poksmall{
-
-    max-height: 40px;
-    max-width: 40px;
-    margin-right: 10px;
+  max-height: 40px;
+  max-width: 40px;
+  margin-right: 10px;
 }
 
 .fed{
-    min-height: 70px;
-    max-height: 70px;
-    margin-right: 5px;
-    float: right;
+  min-height: 70px;
+  max-height: 70px;
+  margin-right: 5px;
+  float: right;
 }
 
 .bou{
-    max-height: 120px;
-    margin-left: 5px;
+  max-height: 120px;
+  margin-left: 5px;
 }
 
 .pik, .txt{
@@ -65,45 +52,34 @@
   x-index: -10;
 }
 
-
-.td-img{
-  width:100px;
-}
-
 .pik{
-position: absolute;
-right: 0;
-top: 10px;
-margin-bottom: 100px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  margin-bottom: 100px;
 }
 
 .txt{
-position: absolute;
-right: 110px;
-top: 0;
+  position: absolute;
+  right: 110px;
+  top: 0;
 }
 
 @media (max-width:500px) {
 
-.txt{display: none}
+  .txt{
+    display: none
+  }
 
-.pik{
-  position: absolute;
-  right: 0px;
-  top: -10px;
-}
+  .pik{
+    position: absolute;
+    right: 0px;
+    top: -10px;
+  }
 
  }
 
-.coveo-facet-column{
-  width: inherit !important;
-}
-
-.intro > h2, .foftxt > h2{
-  font-size:calc(12px + 3vw);
-  line-height: calc(12px + 3vw);
-  margin: 0px;
-}
+/*INTRO*/
 
 .intro > h5, .foftxt > h5{
   font-size:calc(12px + 1vw);
@@ -118,53 +94,47 @@ top: 0;
   max-height: 200px;
 }
 
-/* Global design*/
+/*GENERAL DESIGN*/
 
-@font-face {
-    font-family: bit;
-    src: url(../font/BIT.TTF);
-}
+ .td-img{
+   width:100px;
+ }
 
-@font-face {
-    font-family: min;
-    src: url(../font/Minecraft.TTF);
+ .tr-dtl > td{
+   width: 25% !important;
+ }
+
+.intro > h2, .foftxt > h2{
+  font-size:calc(12px + 3vw);
+  line-height: calc(12px + 3vw);
+  margin: 0px;
 }
 
 .mrg-top-15{
-    padding-top: 15px;
+  padding-top: 15px;
 }
-
-.bit{
-    font-family: bit;
-}
-
-.min{
-  font-family: min;
-}
-
 
 
 .about{
-    position: fixed;
-    bottom: 0;
-    right: 5%;
+  position: fixed;
+  bottom: 0;
+  right: 5%;
 }
 
 .exp > tbody > tr > td, .exp > p{
-
-    padding: 10px;
-    font-size: 11pt;
-    font-weight: bold;
+  padding: 10px;
+  font-size: 11pt;
+  font-weight: bold;
 }
-.exp{
 
+.exp > tbody > tr > td > ul {
+    list-style-type: square;
 }
 
 .pokdsc{
-
-    line-height: 11pt;
-    font-size: 10pt;
-    padding: 0;
+  line-height: 11pt;
+  font-size: 10pt;
+  padding: 0;
 
 }
 
@@ -176,34 +146,27 @@ top: 0;
 }
 
 .dscimg > text{
-
-
-    font-weight: 900;
-    font-size: 10pt;
-    color: rgb(77,77,77);
-    padding-top: 12px;
+  font-weight: 900;
+  font-size: 10pt;
+  color: rgb(77,77,77);
+  padding-top: 12px;
 }
 
 .pokname{
-    font-size: 12pt;
-    font-weight: 900;
+  font-size: 12pt;
+  font-weight: 900;
 }
 
 .advanced, .basic{
-      transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .check{
-    transition: all 0.5s ease;
-    border: none;
-    color: white;
-    padding: 4px;
-    margin-bottom: 5px;
-}
-
-.off{
-    transition: all 0.5s ease;
-    background-color: rgb(77,77,77) !important;
+  transition: all 0.5s ease;
+  border: none;
+  color: white;
+  padding: 4px;
+  margin-bottom: 5px;
 }
 
 .fof, .abo{
@@ -231,20 +194,27 @@ top: 0;
 /*THEME COLOR*/
 
 .magic-box-hasFocus{
-   box-shadow:0px 0px 3px purple;
-   border-color: purple !important;
+ box-shadow:0px 0px 3px purple;
+ border-color: purple !important;
 }
 
 .coveo-bar{
  fill: rgb(250,0,70) !important;
 }
 
-.coveo-results-per-page-list-item.coveo-active, .coveo-facet-header, .coveo-results-per-page-list-item:hover{
+.coveo-results-per-page-list-item.coveo-active, .coveo-facet-header, .coveo-results-per-page-list-item:hover, .check{
   background-color: purple !important;
 }
 
-.check{
-  background-color: purple;
+.CoveoTab.coveo-selected, .CoveoTab.coveo-selected:hover {
+  border-bottom: 4px solid purple !important;
+  padding-bottom: 0px;
+}
+
+/*General mods to Coveo components*/
+
+.coveo-facet-column{
+  width: inherit !important;
 }
 
 .coveo-facet-header{
@@ -262,7 +232,6 @@ top: 0;
   font-size: 11pt;
 }
 
-.CoveoTab.coveo-selected, .CoveoTab.coveo-selected:hover {
-    border-bottom: 4px solid purple !important;
-    padding-bottom: 0px;
+.CoveoSort.coveo-selected, .coveo-small-tabs .CoveoTab.coveo-selected p, .coveo-small-tabs .CoveoTab.coveo-selected:hover p{
+  border: none !important;
 }
