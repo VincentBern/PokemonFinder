@@ -128,6 +128,7 @@
 .exp > tbody > tr > td, .exp > p{
   padding: 10px;
   font-size: 11pt;
+  font-family: monospace;
 }
 
 .exp > tbody > tr > td > ul {

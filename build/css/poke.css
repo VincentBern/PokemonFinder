@@ -26,6 +26,10 @@
   float: right;
 }
 
+.new{
+  height: 16px;
+}
+
 .poksmall{
   max-height: 40px;
   max-width: 40px;
@@ -124,12 +128,17 @@
 .exp > tbody > tr > td, .exp > p{
   padding: 10px;
   font-size: 11pt;
-  font-weight: bold;
+  font-family: monospace;
 }
 
 .exp > tbody > tr > td > ul {
     list-style-type: square;
 }
+
+.exp > tbody > tr > td > ul > li {
+    margin-bottom: 7px;
+}
+
 
 .pokdsc{
   line-height: 11pt;
@@ -169,7 +178,7 @@
   margin-bottom: 5px;
 }
 
-.fof, .abo{
+.fof{
 
   background-position: bottom;
   background-attachment: fixed;
@@ -180,9 +189,18 @@
   background-image: url('../img/wlp.jpg');
   background-color: #FF7E00;
 }
+.abo-wrp{
+    text-align: center;
+    padding: 5px;
+}
+
 .abo{
-  width:100%;
-  padding: 20px;
+  display: inline-block;
+  text-align: left;
+  max-width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .foftxt{
