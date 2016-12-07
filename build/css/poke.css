@@ -127,6 +127,10 @@
   font-weight: bold;
 }
 
+.exp > tbody > tr > td > ul {
+    list-style-type: square;
+}
+
 .pokdsc{
   line-height: 11pt;
   font-size: 10pt;
