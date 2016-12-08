@@ -12,9 +12,9 @@
     "url": "git+https://github.com/VincentBern/PokemonFinder.git"
   },
   "engines": {
-     "node": "6.9.*",
-     "npm":  "4.0.*"
-   },
+    "node": "6.9.*",
+    "npm": "4.0.*"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -35,7 +35,8 @@
     "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^2.0.0",
     "gulpzilla": "^4.0.1",
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "run-sequence": "^1.2.2"
   },
   "devDependencies": {}
 }
