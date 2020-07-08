@@ -1,108 +1,111 @@
 /* FONTS*/
 
 @font-face {
-    font-family: bit;
-    src: url(../font/BIT.TTF);
+  font-family: bit;
+  src: url(../font/BIT.TTF);
 }
 @font-face {
-    font-family: min;
-    src: url(../font/Minecraft.TTF);
+  font-family: min;
+  src: url(../font/Minecraft.TTF);
 }
 .bit {
-    font-family: bit;
+  font-family: bit;
 }
 .min {
-    font-family: min;
+  font-family: min;
 }
 /* IMAGES */
 
 .pokimg {
-    max-height: 100px;
-    max-width: 100%;
-    float: right;
+  width: 100%;
+  max-height: 300px;
+}
+
+.pokimg-wrapper {
+  min-height: 300px;
 }
 .new {
-    height: 16px;
+  height: 16px;
 }
 .poksmall {
-    max-height: 40px;
-    max-width: 40px;
-    margin-right: 10px;
+  max-height: 40px;
+  max-width: 40px;
+  margin-right: 10px;
 }
 .fed {
-    min-height: 70px;
-    max-height: 70px;
-    margin-right: 5px;
-    float: right;
+  min-height: 70px;
+  max-height: 70px;
+  margin-right: 5px;
+  float: right;
 }
 .bou {
-    max-height: 120px;
-    margin-left: 5px;
+  max-height: 120px;
+  margin-left: 5px;
 }
 .pik,
 .txt {
-    width: calc(100px + 1.5vw);
-    margin-top: 15px;
-    min-width: 100px;
-    float: right;
-    x-index: -10;
+  width: calc(100px + 1.5vw);
+  margin-top: 15px;
+  min-width: 100px;
+  float: right;
+  z-index: -10;
 }
 .pik {
-    position: absolute;
-    right: 0;
-    top: 10px;
-    margin-bottom: 100px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  margin-bottom: 100px;
 }
 .txt {
-    position: absolute;
-    right: 110px;
-    top: 0;
+  position: absolute;
+  right: 110px;
+  top: 0;
 }
 @media (max-width: 500px) {
-    .txt {
-        display: none
-    }
-    .pik {
-        position: absolute;
-        right: 0px;
-        top: -10px;
-    }
+  .txt {
+    display: none;
+  }
+  .pik {
+    position: absolute;
+    right: 0px;
+    top: -10px;
+  }
 }
 /*INTRO*/
 
 .intro > h5 {
-    font-size: calc(12px + 1vw);
-    margin: 0px;
+  font-size: calc(12px + 1vw);
+  margin: 0px;
 }
 .foftxt > h5 {
-    font-size: calc(12px + 1vw);
-    margin: 20px 0px 0px 0px;
+  font-size: calc(12px + 1vw);
+  margin: 20px 0px 0px 0px;
 }
 .intro {
-    margin: 10px 0px 0px 20px;
-    display: inline-block;
-    width: 90%;
-    max-height: 200px;
+  margin: 10px 0px 0px 20px;
+  display: inline-block;
+  width: 90%;
+  max-height: 200px;
 }
 /*GENERAL DESIGN*/
 
 .td-img {
-    width: 100px;
+  width: 100px;
 }
 .tr-dtl > td {
-    width: auto !important;
+  width: auto !important;
 }
 .td-tit {
-    font-weight: 700;
-    text-align: right;
+  font-weight: 700;
+  text-align: right;
 }
 .td-tit > img {
-    height: 20px;
+  height: 20px;
 }
 .intro > h2 {
-    font-size: calc(12px + 3vw);
-    line-height: calc(12px + 3vw);
-    margin: 0px;
+  font-size: calc(12px + 3vw);
+  line-height: calc(12px + 3vw);
+  margin: 0px;
 }
 
 .foftxt > h2 {
@@ -111,123 +114,161 @@
   margin: 0px;
 }
 .mrg-top-15 {
-    padding-top: 15px;
+  padding-top: 15px;
 }
 .about {
-    position: fixed;
-    bottom: 0;
-    right: 5%;
+  position: fixed;
+  bottom: 0;
+  right: 5%;
 }
 .exp > tbody > tr > td,
 .exp > p {
-    padding: 10px;
-    font-size: 11pt;
-    font-family: monospace;
+  padding: 10px;
+  font-size: 11pt;
+  font-family: monospace;
 }
 .exp > tbody > tr > td > ul {
-    list-style-type: square;
+  list-style-type: square;
 }
 .exp > tbody > tr > td > ul > li {
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 .pokdsc {
-    line-height: 11pt;
-    font-size: 10pt;
-    padding: 0;
+  line-height: 11pt;
+  font-size: 10pt;
+  padding: 0;
 }
 .dscimg > img {
-    max-height: 16px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+  max-height: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .dscimg > text {
-    font-weight: 900;
-    font-size: 10pt;
-    color: rgb(77, 77, 77);
-    padding-top: 12px;
+  font-weight: 900;
+  font-size: 10pt;
+  color: rgb(77, 77, 77);
+  padding-top: 12px;
 }
 .pokname {
-    font-size: 12pt;
-    font-weight: 900;
+  font-size: 12pt;
+  font-weight: 900;
 }
 .advanced,
 .basic {
-    transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .check {
-    transition: all 0.5s ease;
-    border: none;
-    color: white;
-    padding: 4px;
-    margin-bottom: 5px;
+  transition: all 0.5s ease;
+  border: none;
+  color: white;
+  padding: 4px;
+  margin-bottom: 5px;
 }
 .fof {
-    background-position: bottom;
-    background-attachment: fixed;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-image: url('../img/wlp.jpg');
-    background-color: #FF7E00;
-    width: 90%;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("../img/wlp.jpg");
+  background-color: #ff7e00;
+  width: 90%;
 }
 .abo-wrp {
-    text-align: center;
-    padding: 5px;
+  text-align: center;
+  padding: 5px;
 }
 .abo {
-    display: inline-block;
-    text-align: left;
-    max-width: 800px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: inline-block;
+  text-align: left;
+  max-width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .foftxt {
-    color: white;
-    padding: 20px 0px 0px 30px;
-    width: 100%;
+  color: white;
+  padding: 20px 0px 0px 30px;
+  width: 100%;
 }
 /*THEME COLOR*/
 
 .magic-box-hasFocus {
-    box-shadow: 0px 0px 3px purple;
-    border-color: purple !important;
+  box-shadow: 0px 0px 3px purple;
+  border-color: purple !important;
 }
 .coveo-bar {
-    fill: rgb(250, 0, 70) !important;
+  fill: rgb(250, 0, 70) !important;
 }
 .coveo-results-per-page-list-item.coveo-active,
+.coveo-dynamic-facet-header,
 .coveo-facet-header,
 .coveo-results-per-page-list-item:hover {
-    background-color: purple !important;
-
+  background-color: purple !important;
 }
-.CoveoTab.coveo-selected,
-.CoveoTab.coveo-selected:hover {
-    border-bottom: 4px solid purple !important;
-    padding-bottom: 0px;
-    color: purple !important
+.CoveoTab.coveo-selected {
+  border-bottom: 4px solid purple !important;
+  padding-bottom: 0px;
+  color: purple !important;
+}
+
+.CoveoTab.coveo-selected p,
+.CoveoTab.coveo-selected {
+  color: purple !important;
+}
+
+.bit .CoveoTab p {
+  color: rgba(10, 10, 10, 0.8);
+}
+
+.coveo-tab-section.bit {
+  background-color: white;
+  border-bottom: solid 1px purple;
+}
+
+.coveo-card-layout.CoveoResult {
+  border: none;
 }
 /*General mods to Coveo components*/
 
-.coveo-facet-column {
-    width: inherit !important;
+.pokedex .CoveoFacetSlider {
+  border: none;
 }
-.coveo-facet-header {
-    color: white;
-    font-size: 7pt;
-    font-family: bit;
-    height: 40px;
+
+.coveo-facet-column {
+  width: inherit !important;
+}
+.coveo-dynamic-facet-header span,
+.coveo-facet-header .coveo-facet-header-title {
+  color: white;
+  font-size: 9pt;
+  font-family: bit;
+  margin-left: 10px;
 }
 .coveo-facet-header-title {
-    font-size: 8pt !important;
+  font-size: 8pt !important;
 }
 .coveo-facet-value {
-    line-height: 12pt !important;
-    font-size: 11pt;
+  line-height: 12pt !important;
+  font-size: 11pt;
 }
 .CoveoSort.coveo-selected,
 .coveo-small-tabs .CoveoTab.coveo-selected p,
 .coveo-small-tabs .CoveoTab.coveo-selected:hover p {
-    border: none !important;
+  border: none !important;
+}
+
+.coveo-dynamic-facet-header-btn svg {
+  color: white;
+}
+
+.pokedex .coveo-card-layout.CoveoResult {
+  border: none;
+}
+
+.pokedex .magic-box-suggestion.coveo-omnibox-selectable span.coveo-omnibox-hightlight {
+  color: black;
+}
+
+.pokedex .magic-box-suggestion.coveo-omnibox-selectable span {
+  color: purple;
 }
