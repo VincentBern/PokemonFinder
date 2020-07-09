@@ -27,7 +27,7 @@
     </div>
 
     <div class="coveo-tab-section bit">
-      <a class="CoveoTab" data-id="All" data-caption="Pokedex"></a>
+      <a class="CoveoTab" data-id="Pokedex" data-caption="Pokedex"></a>
       <a class="CoveoTab" data-id="Items" data-caption="Items"></a>
       <a class="CoveoTab" data-id="About" data-caption="About"></a>
     </div>
@@ -96,13 +96,13 @@
                 <a class="CoveoResultLink">{{- itemname }}</a>
               </div>
               <div class="coveo-result-row">
-                <%= highlightStreamText(raw.itemeffect) %>
+                <%= highlightStreamText(raw.itemdescription) %>
               </div>
             </div>
           </script>
         </div>
-        <div class="CoveoResultList" data-wait-animation="fade" data-auto-select-fields-to-include="false" data-layout="card" data-tab="Pokedex">
-          <script id="pokedex" class="result-template" type="text/underscore" data-condition="raw.source==='Pokemon Pokedex'">
+        <div class="CoveoResultList" data-wait-animation="fade" data-auto-select-fields-to-include="false" data-layout="card" >
+          <script id="pokedex" class="result-template" type="text/underscore" data-condition="raw.source==='Pokemon Pokedex'" data-tab="Pokedex">
               {{ var pokname = raw.pokname.toLowerCase(); }}
               <div class="coveo-result-frame">
 
