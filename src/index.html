@@ -83,7 +83,7 @@
         <div class="CoveoDidYouMean"></div>
         <div class="CoveoErrorReport" data-pop-up="false"></div>
         <div class="CoveoResultList items" data-wait-animation="fade" data-auto-select-fields-to-include="false" data-layout="list" data-tab="Items">
-          <script id="items" class="result-template" type="text/underscore" data-condition="raw.source==='Pokemon Items'">
+          <script id="items" class="result-template" type="text/underscore">
             {{
               var itemname = raw.itemname;
               itemname = itemname.slice(0,-7);
@@ -96,13 +96,13 @@
                 <a class="CoveoResultLink">{{- itemname }}</a>
               </div>
               <div class="coveo-result-row">
-                <%= highlightStreamText(raw.itemdescription) %>
+                <%= highlightStreamText(raw.itemeffect) %>
               </div>
             </div>
           </script>
         </div>
-        <div class="CoveoResultList" data-wait-animation="fade" data-auto-select-fields-to-include="false" data-layout="card" >
-          <script id="pokedex" class="result-template" type="text/underscore" data-condition="raw.source==='Pokemon Pokedex'" data-tab="Pokedex">
+        <div class="CoveoResultList" data-wait-animation="fade" data-auto-select-fields-to-include="false" data-layout="card"  data-tab="Pokedex">
+          <script id="pokedex" class="result-template" type="text/underscore">
               {{ var pokname = raw.pokname.toLowerCase(); }}
               <div class="coveo-result-frame">
 
