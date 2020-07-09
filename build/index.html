@@ -27,7 +27,7 @@
     </div>
 
     <div class="coveo-tab-section bit">
-      <a class="CoveoTab" data-id="Pokedex" data-caption="Pokedex"></a>
+      <a class="CoveoTab" data-id="All" data-caption="Pokedex"></a>
       <a class="CoveoTab" data-id="Items" data-caption="Items"></a>
       <a class="CoveoTab" data-id="About" data-caption="About"></a>
     </div>
@@ -96,7 +96,7 @@
                 <a class="CoveoResultLink">{{- itemname }}</a>
               </div>
               <div class="coveo-result-row">
-                <span class="CoveoExcerpt"></span>
+                <%= highlightStreamText(raw.itemeffect) %>
               </div>
             </div>
           </script>
