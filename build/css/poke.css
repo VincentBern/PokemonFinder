@@ -273,3 +273,10 @@
     color: purple;
   }
   
+  .CoveoResultList.items{
+    max-width: 1300px;
+  }
+
+  .item-img{
+    min-width: 100px;
+  }

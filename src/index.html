@@ -82,15 +82,26 @@
         <div class="CoveoHiddenQuery"></div>
         <div class="CoveoDidYouMean"></div>
         <div class="CoveoErrorReport" data-pop-up="false"></div>
-        <div class="CoveoResultList" data-wait-animation="fade" data-auto-select-fields-to-include="false" data-layout="card">
+        <div class="CoveoResultList items" data-wait-animation="fade" data-auto-select-fields-to-include="false" data-layout="list" data-tab="Items">
           <script id="items" class="result-template" type="text/underscore" data-condition="raw.source==='Pokemon Items'">
+            {{
+              var itemname = raw.itemname;
+              itemname = itemname.slice(0,-7);
+              var lowerItemName = itemname.toLowerCase();
+              lowerItemName =  lowerItemName.replace(" ", "-")
+            }}
             <div class="coveo-result-frame">
               <div class="coveo-result-row">
-                <img src="https://img.pokemondb.net/sprites/items/big-mushroom.png">
-                <a class="CoveoResultLink"></a>
+                <img class="item-img" src="https://img.pokemondb.net/sprites/items/{{- lowerItemName}}.png">
+                <a class="CoveoResultLink">{{- itemname }}</a>
+              </div>
+              <div class="coveo-result-row">
+                <span class="CoveoExcerpt"></span>
               </div>
             </div>
           </script>
+        </div>
+        <div class="CoveoResultList" data-wait-animation="fade" data-auto-select-fields-to-include="false" data-layout="card" data-tab="Pokedex">
           <script id="pokedex" class="result-template" type="text/underscore" data-condition="raw.source==='Pokemon Pokedex'">
               {{ var pokname = raw.pokname.toLowerCase(); }}
               <div class="coveo-result-frame">
@@ -156,7 +167,7 @@
     </div>
 
     <div class="abo" data-tab="About"></div>
-    <!-- Deploy -->
+
     <script src="js/bundle.min.js"></script>
     <script class="coveo-script" src="https://static.cloud.coveo.com/searchui/v2.9159/js/CoveoJsSearch.Lazy.min.js"></script>
     <script src="https://static.cloud.coveo.com/searchui/v2.9159/js/templates/templates.js"></script>
